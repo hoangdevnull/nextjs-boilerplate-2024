@@ -1,0 +1,4 @@
+{
+  // Configuration for JavaScript files
+  "extends": ["@hoangdevnull/eslint-config-next"]
+}
