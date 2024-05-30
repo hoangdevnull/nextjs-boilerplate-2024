@@ -1,18 +1,10 @@
-import { createContext, useContext } from 'react';
+import { createSafeContext } from '@/lib/create-safe-context';
 
 type AppContextProps = {
   activeNav?: string;
   setActiveNav: (id: string) => void;
 };
 
-export const AppContext = createContext<AppContextProps | null>(null);
-
-export function useAppContext() {
-  const context = useContext(AppContext);
-
-  if (!context) {
-    throw new Error('useAppContext must be used within a <Carousel />');
-  }
-
-  return context;
-}
+export const [AppContextProvider, useAppContext] = createSafeContext<AppContextProps>(
+  'AppContextProvider component was not found in tree'
+);

@@ -49,8 +49,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 1,
   themeColor: [
-    // { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    // { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
 };
 
@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         suppressHydrationWarning
         className={clsx('bg-background min-h-screen font-sans antialiased', fontSans.variable, fontMono.variable)}
       >
-        <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>{children}</Providers>
+        <Providers themeProps={{ attribute: 'class', forcedTheme: 'light' }}>{children}</Providers>
       </body>
     </html>
   );

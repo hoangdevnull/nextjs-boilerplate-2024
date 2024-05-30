@@ -15,7 +15,7 @@ const hStackVariants = tv(
       },
       align: {
         default: 'items-stretch',
-        center: 'items-center items',
+        center: 'items items-center',
         start: 'items-start',
         end: 'items-end',
         baseline: 'items-baseline',

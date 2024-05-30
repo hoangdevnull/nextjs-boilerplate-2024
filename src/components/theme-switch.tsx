@@ -29,7 +29,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({ className, classNames }) => 
   return (
     <Component
       {...getBaseProps({
-        className: clsx('px-px transition-opacity hover:opacity-80 cursor-pointer', className, classNames?.base),
+        className: clsx('cursor-pointer px-px transition-opacity hover:opacity-80', className, classNames?.base),
       })}
     >
       <VisuallyHidden>
@@ -40,7 +40,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({ className, classNames }) => 
         className={slots.wrapper({
           class: clsx(
             [
-              'w-auto h-auto',
+              'h-auto w-auto',
               'bg-transparent',
               'rounded-lg',
               'flex items-center justify-center',
