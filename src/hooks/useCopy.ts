@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 type CopyFn = (text?: string) => void; // Return success
 
-export function useCopy(withToast = true): [boolean, CopyFn] {
+export function useCopy(): [boolean, CopyFn] {
   const [copied, setCopied] = useState(false);
 
   const copy = async (textToCopy?: string) => {
